@@ -5,6 +5,7 @@ import time
 def main():
     spark = SparkSession.builder \
         .appName("Word Count") \
+        .config("dfs.client.read.shortcircuit.skip.checksum", "true") \
         .getOrCreate()
 
     sc = spark.sparkContext
