@@ -3,9 +3,8 @@ import pyspark.sql.functions as F
 import time
 
 spark = SparkSession.builder \
-    .appName("simple-python-starters") \
+    .appName("airline-delays-avro") \
     .getOrCreate()
-
 
 df = spark.read.csv("data_sets/airline/Airline_Delay_Cause.csv", header=True, inferSchema=True)
 
