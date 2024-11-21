@@ -20,7 +20,6 @@ carrier_grouped_df = carrier_grouped_df.withColumn(
 
 sorted_carrier_df = carrier_grouped_df.orderBy(F.col('delay_percentage').desc())
 
-
 sorted_carrier_df.write.format("avro").save("output/carrier_delays_percentage.avro")
 
 # time.sleep(100000)

@@ -8,7 +8,7 @@ object PublicationInfluenceAnalysis {
       .appName("Publication Influence Analysis")
       .getOrCreate()
 
-    
+
 
     val df = spark.read
       .option("header", "true")
